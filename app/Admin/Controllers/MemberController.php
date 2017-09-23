@@ -19,6 +19,7 @@ use Encore\Admin\Widgets\Collapse;
 use Encore\Admin\Widgets\InfoBox;
 use Encore\Admin\Widgets\Tab;
 use Encore\Admin\Widgets\Table;
+use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
@@ -31,6 +32,7 @@ class MemberController extends Controller
      */
     public function index()
     {
+//        echo 1;
         return Admin::content(function (Content $content) {
 
             $content->header('会员管理');
@@ -127,6 +129,20 @@ class MemberController extends Controller
     }
 
     /**
+     * 储存一个新用户。
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function update(Request $request)
+    {
+        $name = $request->input('name');
+        return $name;
+
+        //
+    }
+
+    /**
      * Edit interface.
      *
      * @param $id
@@ -163,22 +179,44 @@ class MemberController extends Controller
 //        });
 
     }
+//
+//    /**
+//     * Create interface.
+//     *
+//     * @return Content
+//     */
+//    public function create()
+//    {
+//        return Admin::content(function (Content $content) {
+//
+//            $content->header('会员管理');
+//            $content->description('');
+//
+//            $content->body($this->form());
+//        });
+//    }
+
 
     /**
-     * Create interface.
      *
-     * @return Content
+     *
      */
-    public function create()
-    {
-        return Admin::content(function (Content $content) {
-
-            $content->header('会员管理');
-            $content->description('');
-
-            $content->body($this->form());
-        });
+    public function create(){
+        var_dump($_GET);
+        var_dump($_POST);
+        echo 1;exit;
     }
+
+    /**
+     *
+     *
+     */
+    public function save(){
+        var_dump($_GET);
+        var_dump($_POST);
+        echo 1;exit;
+    }
+
 
     /**
      * Make a grid builder.
@@ -205,6 +243,7 @@ class MemberController extends Controller
         });
     }
 
+
     /**
      * Make a form builder.
      *
@@ -213,26 +252,7 @@ class MemberController extends Controller
     protected function form()
     {
         return Admin::form(Member::class, function (Form $form) {
-
-            $form->display('id', 'ID');
-
-            $form->text('name', '名称');
-            $form->email('email', '邮箱');
-            $form->password('password', '密码');
-            $form->text('remember_token', 'Token');
-
-            $form->display('created_at', '创建时间');
-            $form->display('updated_at', '更新时间');
-
-
-
-            $form->text('name', '名称');
-            $form->email('email', '邮箱');
-            $form->password('password', '密码');
-            $form->text('remember_token', 'Token');
-
-            $form->display('created_at', '创建时间');
-            $form->display('updated_at', '更新时间');
+            $form->setView('test');
         });
     }
 

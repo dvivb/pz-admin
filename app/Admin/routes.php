@@ -25,6 +25,32 @@ Route::group([
     $router->resource('young_crops', Dictionary\YoungCropController::class);
 
     $router->resource('member', MemberController::class);
+    $router->resource('member', MemberController::class);
+
+
+    // Test start
+    //    $router::post('user/{target}', MemberController@update);
+
+//    $router->resource('update', MemberController::class);
+    $router->get('api/members', '\App\Admin\Api\MemberApi@member');
+
+    $router->post('member/create', 'MemberController@create');
+    $router->post('member/save', 'MemberController@save');
+    $router->get('home/index', 'HomeController@index');
+
+
+    $router->get('houses', 'HousesController@index');
+    $router->get('houses/create', 'HousesController@create');
+    $router->post('houses/store', 'HousesController@store');
+    $router->get('houses/{id}/edit', 'HousesController@edit');
+
+    // Test end
+
+
+
+
+
+
 
     $router->resource('periods', PeriodController::class, ['except' => ['index']]);
 
