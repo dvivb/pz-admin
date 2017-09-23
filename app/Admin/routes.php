@@ -24,6 +24,8 @@ Route::group([
     $router->resource('land_status', Dictionary\LandStatusController::class);
     $router->resource('young_crops', Dictionary\YoungCropController::class);
 
+    $router->resource('member', MemberController::class);
+
     $router->resource('periods', PeriodController::class, ['except' => ['index']]);
 
     $router->get('api/projects', '\App\Admin\Api\ProjectApi@projects');
