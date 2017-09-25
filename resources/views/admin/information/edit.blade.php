@@ -63,7 +63,7 @@
                         <input type="text" class="form-control" name="updated_at"  placeholder="修改时间">
                     </div>
                 </div>
-
+                
                 <div class="form-group col-md-4">
                     <label for="inputPassword3" class="col-sm-3 control-label">修改用户</label>
 
@@ -127,7 +127,7 @@
                         <input type="text" class="form-control" name="updated_at"  placeholder="土地征补总金额">
                     </div>
                 </div>
-
+                
                 <div class="form-group col-md-3">
                     <label for="inputPassword3" class="col-sm-5 control-label">修改用户</label>
 
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <!-- /.box-body -->
-
+            
             <div class="box-footer">
                 <button type="submit" class="btn btn-default">Cancel</button>
                 <button type="submit" class="btn btn-info pull-right">Sign in</button>

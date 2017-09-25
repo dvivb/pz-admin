@@ -8,7 +8,7 @@
         <!-- /.box-header -->
         <!-- form start -->
         {{--<form class="form-horizontal">--}}
-        <form action="http://pz.admin.com/admin/houses/store" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
+        <form action="{{ URL('admin/houses/store') }}" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="box-body">
                 <div class="form-group">

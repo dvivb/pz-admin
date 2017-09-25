@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Admin\Controllers;
-//namespace App\Http\Controllers\Admin;
 
-use App\Houses;
+use App\Information;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -20,7 +19,7 @@ use Encore\Admin\Grid;
 
 use Illuminate\Support\Facades\Redirect, Illuminate\Support\Facades\Input, Encore\Admin\Auth;
 
-class HousesController extends Controller {
+class InformationController extends Controller {
 
     public function index()
     {
@@ -55,8 +54,8 @@ class HousesController extends Controller {
      */
     protected function form()
     {
-        return Admin::form(Houses::class, function (Form $form) {
-            $form->setView('admin.houses.create');
+        return Admin::form(Information::class, function (Form $form) {
+            $form->setView('admin.information.edit');
         });
     }
 
@@ -107,30 +106,6 @@ class HousesController extends Controller {
         });
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request,$id)
-    {
-//        $this->validate($request, [
-//            'title' => 'required|unique:houses,title,'.$id.'|max:255',
-//            'body' => 'required',
-//        ]);
-
-        $page = Houses::find($id);
-        $page->title = Input::get('title');
-        $page->body = Input::get('body');
-//        $page->user_id = 1;//Auth::user()->id;
-
-        if ($page->save()) {
-            return Redirect::to('admin/houses');
-        } else {
-            return Redirect::back()->withInput()->withErrors('保存失败！');
-        }
-    }
 
     /**
      * Make a grid builder.
@@ -139,19 +114,16 @@ class HousesController extends Controller {
      */
     protected function grid()
     {
-        return Admin::grid(Houses::class, function (Grid $grid) {
+        return Admin::grid(Information::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-
-            $grid->title('标题');
-            $grid->body('内容');
 
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
 
-            $grid->filter(function ($filter) {
-                $filter->like('title', '名称');
-            });
+//            $grid->filter(function ($filter) {
+//                $filter->like('title', '名称');
+//            });
 
         });
     }

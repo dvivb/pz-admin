@@ -44,6 +44,12 @@ Route::group([
     $router->post('houses/store', 'HousesController@store');
     $router->get('houses/{id}/edit', 'HousesController@edit');
 
+
+    $router->resource('grounds', GroundsController::class);
+    $router->resource('shanties', ShantiesController::class);
+    $router->resource('residentials', ResidentialsController::class);
+    $router->resource('information', InformationController::class);
+
     // Test end
 
 
