@@ -104,16 +104,18 @@ class ProjectController extends Controller
     protected function form()
     {
         return Admin::form(Project::class, function (Form $form) {
+            $form->setView('admin.project.edit');
 
-            $form->display('id', 'ID');
+//             $form->display('id', 'ID');
 
-            $form->text('name', '名称');
-            $form->number('total_household', '总户数');
-            $form->number('total_areas', '总面积');
-            $form->currency('amount', '总金额');
+//             $form->text('name', '名称');
+//             $form->number('total_household', '总户数');
+//             $form->number('total_areas', '总面积');
+//             $form->number('col_household', '应该征补户数');
+//             $form->currency('amount', '总金额');
 
-            $form->display('created_at', '创建时间');
-            $form->display('updated_at', '更新时间');
+//             $form->display('created_at', '创建时间');
+//             $form->display('updated_at', '更新时间');
         });
     }
 }
