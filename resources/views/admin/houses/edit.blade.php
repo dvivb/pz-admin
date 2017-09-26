@@ -7,6 +7,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
+        {{ var_dump(model) }}
         {{--<form class="form-horizontal">--}}
         <form action="http://pz.admin.com/admin/houses/store" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -18,7 +19,7 @@
                     <label for="inputEmail3" class="col-sm-2 control-label">项目名称</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control"  name="name"  placeholder="项目名称">
+                        <input type="text" value="11111" class="form-control"  name="name"  placeholder="项目名称">
                     </div>
                 </div>
                 <div class="form-group col-md-6">
