@@ -64,7 +64,14 @@ class ProjectController extends Controller
             $content->body($this->form());
         });
     }
-
+    
+    /**
+     * store data
+     * 
+     */
+    public function store(){
+       return 1;
+    }
     /**
      * Make a grid builder.
      *
@@ -106,7 +113,7 @@ class ProjectController extends Controller
         
         return Admin::form(Project::class, function (Form $form) {
             
-            $form->text('name', '名称');
+            $form->text('name', '项目名称')->setWidth(9,3);
             $form->text('code', '项目编号');
             $form->number('total_household', '总户数');
             $form->number('total_areas', '总面积');
@@ -149,7 +156,7 @@ class ProjectController extends Controller
             $form->number('pya_col_amout_household', '实际土地征补总面积');
             $form->number('pya_col_amout_household', '实际土地征补总金额');
             
-            $form->setWidth(8,4);
+            $form->setWidth(7,5);
             $form->setView('admin.project.edit');
             $form->number('total_areas', '总面积');
 //             return view('admin.project.edit',compact('first','last'));

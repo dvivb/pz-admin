@@ -43,7 +43,9 @@ Route::group([
     $router->get('houses/create', 'HousesController@create');
     $router->post('houses/store', 'HousesController@store');
     $router->get('houses/{id}/edit', 'HousesController@edit');
-
+/* projects route start */
+    $router->get('projects/store', 'ProjectController@store');
+/* projects toute end */
 
     $router->resource('grounds', GroundsController::class);
     $router->resource('shanties', ShantiesController::class);

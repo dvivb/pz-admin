@@ -9,7 +9,7 @@
         <!-- /.box-header -->
         <!-- form start -->
         {{--<form class="form-horizontal">--}}
-        <form action="http://pz.admin.com/admin/houses/store" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
+        <form action="/admin/projects/store" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
             
@@ -192,8 +192,8 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+                <button type="submit" class="btn btn-default">取消</button>
+                <button type="submit" class="btn btn-info pull-right">提交</button>
             </div>
             <!-- /.box-footer -->
         </form>
