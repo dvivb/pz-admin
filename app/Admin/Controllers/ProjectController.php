@@ -11,7 +11,9 @@ use App\Admin\Extensions\Importer;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 use App\Admin\Extensions\CustomExporter;
-
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 class ProjectController extends Controller
 {
     use ModelForm;
@@ -69,8 +71,22 @@ class ProjectController extends Controller
      * store data
      * 
      */
-    public function store(){
-       return 1;
+    public function store(Request $request){
+        if(empty($_POST)){
+            goto Label;
+        }
+        $project = Project::find($request->input('id'));
+//        $page->user_id = 1;//Auth::user()->id;
+        foreach($_POST as $k=>$v){
+            if($k =='_token')continue;
+            $project->$k = $request->input($k);
+        }
+        if ($project->save()) {
+            return Redirect::to('admin/projects');
+        } else {
+            Label:
+            return Redirect::back()->withInput()->withErrors('保存失败！');
+        }
     }
     /**
      * Make a grid builder.
@@ -147,14 +163,15 @@ class ProjectController extends Controller
             $form->number('actul_warranty_price', '支付质保金额');
             
             
-            $form->number('pya_col_household', '实际征补户数');
-            $form->number('pya_col_area_household', '实际征补房屋面积');
-            $form->number('pya_col_amout_household', '实际屋征补总金额');
-            $form->number('pya_excessive_amount', '实际过渡费');
-            $form->number('pya_col_amout_household', '实际房屋征补总金额');
-            $form->number('pya_col_amout_household', '实际土地征补总户数');
-            $form->number('pya_col_amout_household', '实际土地征补总面积');
-            $form->number('pya_col_amout_household', '实际土地征补总金额');
+            $form->number('actual_household', '实际征补户数');
+            $form->number('actual_area_household', '实际征补房屋面积');
+            $form->number('actual_amout_household', '实际房屋征补总金额');
+            $form->number('actual_excessive_amount', '实际过渡费');
+            $form->number('actual_amout_household', '实际房屋征补总金额');
+            $form->number('actual_land_hosehold', '实际土地征补总户数');
+            $form->number('actual_land_areas', '实际土地征补总面积');
+            $form->number('actual_area_amount', '实际土地征补总金额');
+            $form->number('id', 'id');
             
             $form->setWidth(7,5);
             $form->setView('admin.project.edit');

@@ -44,7 +44,7 @@ Route::group([
     $router->post('houses/store', 'HousesController@store');
     $router->get('houses/{id}/edit', 'HousesController@edit');
 /* projects route start */
-    $router->get('projects/store', 'ProjectController@store');
+    $router->post('project/store', 'ProjectController@store');
 /* projects toute end */
 
     $router->resource('grounds', GroundsController::class);

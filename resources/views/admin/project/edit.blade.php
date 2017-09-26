@@ -9,15 +9,9 @@
         <!-- /.box-header -->
         <!-- form start -->
         {{--<form class="form-horizontal">--}}
-        <form action="/admin/projects/store" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
+        <form action="/admin/project/store" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
-            
-            <div class="fields-group" style="display:none">
-                    @foreach($form->fields() as $field)
-                        {!! $field->render() !!}
-                    @endforeach
-                </div>
             
             <div class="box-body">
                 <div class="form-group col-md-12">
@@ -45,13 +39,6 @@
                     {!! $form->fields()[6]->render() !!}
                 </div>
                 
-                <div class="form-group col-md-4">
-                    <label for="inputPassword3" class="col-sm-3 control-label">修改用户</label>
-
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="amount"  placeholder="修改用户">
-                    </div>
-                </div>
             </div>
             <!-- /.box-body -->
             <!-- /.box-body -->
@@ -88,9 +75,6 @@
                 
                 
                 <div class="form-group col-md-3">
-                     {!! $form->fields()[11]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
                     {!! $form->fields()[12]->render() !!}
                 </div>
                 <div class="form-group col-md-3">
@@ -99,10 +83,10 @@
                 <div class="form-group col-md-3">
                     {!! $form->fields()[14]->render() !!}
                 </div>
-                
-                 <div class="form-group col-md-3">
-                     {!! $form->fields()[36]->render() !!}
+                <div class="form-group col-md-3">
+                   &nbsp;<br><br><br>
                 </div>
+                
                 <div class="form-group col-md-3">
                     {!! $form->fields()[37]->render() !!}
                 </div>
@@ -111,6 +95,9 @@
                 </div>
                 <div class="form-group col-md-3">
                     {!! $form->fields()[39]->render() !!}
+                </div>
+                <div class="form-group col-md-3">
+                   &nbsp;
                 </div>
                 
                 
@@ -190,6 +177,9 @@
                 <div class="form-group col-md-3">
                 </div>
             </div>
+             <div class="form-group col-md-3" style='display:none '>
+                    {!! $form->fields()[40]->render() !!}
+                </div>
             <!-- /.box-body -->
             <div class="box-footer">
                 <button type="submit" class="btn btn-default">取消</button>
