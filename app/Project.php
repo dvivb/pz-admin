@@ -8,9 +8,13 @@ class Project extends Model
 {
     protected $fillable = [
         'name',
+        'code',
         'total_household',
         'total_areas',
         'amount',
+        'created_at',
+        'updated_at',
+        'col_household'
     ];
 
 

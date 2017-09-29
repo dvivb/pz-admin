@@ -31,19 +31,19 @@
                 <div class="form-group col-md-4">
                    {!! $form->fields()[4]->render() !!}
                 </div>
-                <div class="form-group col-md-4">
-                    {!! $form->fields()[5]->render() !!}
-                </div>
-                <div class="form-group col-md-4">
-                    {!! $form->fields()[6]->render() !!}
-                </div>
-                
             </div>
             <!-- /.box-body -->
             <!-- /.box-body -->
             <div class="box-body">
+                
                 <div class="form-group col-md-12">
                     <label  class="col-sm-1 control-label">征收补偿信息:</label>
+                </div>
+                <div class="form-group col-md-3">
+                    {!! $form->fields()[5]->render() !!}
+                </div>
+                <div class="form-group col-md-3">
+                    {!! $form->fields()[6]->render() !!}
                 </div>
                 <div class="form-group col-md-3">
                      {!! $form->fields()[7]->render() !!}
@@ -52,54 +52,16 @@
                     {!! $form->fields()[8]->render() !!}
                 </div>
                 <div class="form-group col-md-3">
-                    {!! $form->fields()[9]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
                     {!! $form->fields()[10]->render() !!}
                 </div>
                 
                 <div class="form-group col-md-3">
-                    {!! $form->fields()[32]->render() !!}
+                    {!! $form->fields()[11]->render() !!}
                 </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[33]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[34]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[35]->render() !!}
-                </div>
-                
-                
-                
                 <div class="form-group col-md-3">
                     {!! $form->fields()[12]->render() !!}
                 </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[13]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[14]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                   &nbsp;<br><br><br>
-                </div>
-                
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[37]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[38]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[39]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                   &nbsp;
-                </div>
-                
-                
+  
                 
             </div>
             <!-- /.box-body -->
@@ -108,31 +70,42 @@
                 <div class="form-group col-md-12">
                     <label  class="col-sm-1 control-label">项目工程信息:</label>
                 </div>
+                              
+                
                 <div class="form-group col-md-6">
+                    {!! $form->fields()[13]->render() !!}
+                </div>
+                <div class="form-group col-md-3">
+                    {!! $form->fields()[14]->render() !!}
+                </div>
+                <div class="form-group col-md-3">
                     {!! $form->fields()[15]->render() !!}
                 </div>
+                
+                
+                
                 <div class="form-group col-md-3">
                     {!! $form->fields()[16]->render() !!}
                 </div>
                 <div class="form-group col-md-3">
-                    {!! $form->fields()[17]->render() !!}
+                    {!! $form->fields()[22]->render() !!}
                 </div>
-                
-                
                 <div class="form-group col-md-3">
                    {!! $form->fields()[18]->render() !!}
                 </div>
-                
                 <div class="form-group col-md-3">
                     {!! $form->fields()[20]->render() !!}
                 </div>
                 
+                
+                
+                
                 <div class="form-group col-md-3">
-                    {!! $form->fields()[22]->render() !!}
+                    {!! $form->fields()[17]->render() !!}
                 </div>
                 
                 <div class="form-group col-md-3">
-                    {!! $form->fields()[24]->render() !!}
+                    {!! $form->fields()[23]->render() !!}
                 </div>
                 
                 <div class="form-group col-md-3">
@@ -141,44 +114,36 @@
                 <div class="form-group col-md-3">
                    {!! $form->fields()[21]->render() !!}
                 </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[23]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[25]->render() !!}
-                </div>
                 
                 
+                
+                <div class="form-group col-md-3">
+                    {!! $form->fields()[24]->render() !!}
+                </div>
                 <div class="form-group col-md-3">
                     {!! $form->fields()[26]->render() !!}
                 </div>
-               
                 <div class="form-group col-md-3">
                     {!! $form->fields()[28]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
-                    {!! $form->fields()[30]->render() !!}
                 </div>
                 <div class="form-group col-md-3">
                 &nbsp;<br/><br/><br/>
                 </div>
                 
+                
+                <div class="form-group col-md-3">
+                    {!! $form->fields()[25]->render() !!}
+                </div>
                 <div class="form-group col-md-3">
                     {!! $form->fields()[27]->render() !!}
                 </div>
                 <div class="form-group col-md-3">
                     {!! $form->fields()[29]->render() !!}
                 </div>
-                
                 <div class="form-group col-md-3">
-                    {!! $form->fields()[31]->render() !!}
-                </div>
-                <div class="form-group col-md-3">
+                &nbsp;<br/><br/><br/>
                 </div>
             </div>
-             <div class="form-group col-md-3" style='display:none '>
-                    {!! $form->fields()[40]->render() !!}
-                </div>
             <!-- /.box-body -->
             <div class="box-footer">
                 <button type="submit" class="btn btn-default">取消</button>
