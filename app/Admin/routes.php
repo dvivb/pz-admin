@@ -48,7 +48,12 @@ Route::group([
 /* projects toute end */
 
     $router->resource('grounds', GroundsController::class);
+
+    //  shanties
     $router->resource('shanties', ShantiesController::class);
+    $router->post('shanties/store', 'ShantiesController@store');
+
+
     $router->resource('residentials', ResidentialsController::class);
     $router->resource('information', InformationController::class);
 
